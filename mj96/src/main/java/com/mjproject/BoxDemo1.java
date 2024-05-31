@@ -6,8 +6,14 @@ class Box {
     double depth;
 
     double volume() {
-        return width*height*depth;
-        
+        return width * height * depth;
+
+    }
+
+    void setDim(double width, double height, double depth) {
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
     }
 }
 
@@ -15,13 +21,10 @@ public class BoxDemo1 {
     public static void main(String[] args) {
         Box mybox1 = new Box();
         Box mybox2 = new Box();
-        double vol ;
+        double vol;
 
         // assign values to mybox1's instance variables
-        mybox1.width = 10;
-        mybox1.height = 20;
-        mybox1.depth = 15;
-
+        mybox1.setDim(10, 20, 17);
         /*
          * assign different values to mybox2's
          * instance variables
