@@ -10,6 +10,13 @@ class Box2 {
     double width;
     double depth;
 
+    // Constructor Clone of an object.
+    Box2(Box2 obj) { // pass object to constructor.
+        this.width = obj.width;
+        this.height = obj.height;
+        this.depth = obj.depth;
+    }
+
     // Constructor used when all dimensios specified.
     Box2(double width, double height, double depth) {
         this.width = width;
@@ -42,6 +49,10 @@ public class OverloadCons {
         Box2 myCube = new Box2(7);
 
         double vol;
+
+        Box2 myCloneBox = new Box2(myBox1);
+        vol = myCloneBox.volume();
+        System.out.println("Volume of clone is :" + vol);
 
         vol = myBox1.volume();
         System.out.println("Volume of myBox1 is " + vol);
