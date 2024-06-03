@@ -1,7 +1,5 @@
 package com.mjproject;
 
-import javax.swing.Box;
-
 /*Here, Box defines three constructors to initialize
     the dimensions of a box in various ways
 */
