@@ -2,8 +2,8 @@ package com.mjproject;
 
 // This class defines an integer stack that can hold 10 values,
 class Stack {
-    int stck[] = new int[10];
-    int tos;
+    private int stck[] = new int[10];
+    private int tos;
 
     // Initialize top-of-stack
     Stack() {
@@ -28,6 +28,10 @@ class Stack {
             return stck[tos--];
         }
     }
+
+    int getTos(){
+        return tos;
+    }
 }
 
 public class TestStack {
@@ -41,9 +45,13 @@ public class TestStack {
         for (int i = 10; i < 20; i++)
             mystack2.push(i);
 
-        while (mystack1.tos > -1)
+        while (mystack1.getTos() > -1)
             System.out.println(mystack1.pop());
-        while (mystack2.tos > -1)
+        while (mystack2.getTos() > -1)
             System.out.println(mystack2.pop());
+
+        // these statements are not legal
+        // mystack1.tos = -2;
+        // mystack2.stck = 100;
     }
 }
